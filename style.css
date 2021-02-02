@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans&display=swap%27');
+*
+{
+    font-family: Courgette;
+} 
+.titre
+{
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    animation:myanimation 3s infinite;
+}
+@keyframes myanimation{
+                0%{color:#008791;}
+                10%{color:#009140;}
+                25%{color:#009150;}
+                35%{color: #009160;}
+                50%{color:#009170;}
+                75%{color:#009180;}
+                100%{color: #009193;}
+                }
+*, body
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #e7e7e7;
+    color: #009193;
+}
+.container
+{
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+.img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.login-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+.img img {
+    width: 500px;
+}
+form {
+    width: 360px;
+}
+.login-content img {
+    height: 100px;
+}
+.login-content h2 {
+    margin: 15px 0;
+    color: #009193;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.login-content .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid grey;
+}
+.login-content .input-div.one {
+    margin-top: 0;
+}
+.login-content .input-div.two {
+    height: 80px;
+    margin-top: 0;
+}
+textarea
+{
+    height: 50px;
+    margin-left: 20%;
+    background-color: transparent;
+}
+.i {
+    color: #e7e7e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i i {
+    transition: .3s;
+}
+
+.input-div>div {
+    position: relative;
+    height: 45px;
+}
+
+.input-div>div>h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #009193;
+    font-size: 18px;
+    transition: .3s;
+}
+.input-div:before,
+.input-div:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #009193;
+    transition: .4s;
+}
+.input-div:before {
+    right: 50%;
+}
+.input-div:after {
+    left: 50%;
+}
+.input-div.focus:before,
+.input-div.focus:after {
+    width: 50%;
+}
+.input-div.focus>div>h5 {
+    top: -5px;
+    font-size: 15px;
+}
+.input-div.focus>.i>i {
+    color: #009193;
+}
+.input-div>div>input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    color: grey;
+}
+.input-div.pass {
+    margin-bottom: 4px;
+}
+a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #009195;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+a:hover {
+    color: #38d39f;
+}
+.ButtonContainer
+{
+    background: transparent;
+    border: #e7e7e7;
+}
+.btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #009170, #009195, #009193);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #e7e7e7;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover {
+    background-position: right;
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 290px;
+    }
+    .login-content h2 {
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+    .img img {
+        width: 400px;
+    }
+    .titre
+    {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    animation:myanimation 3s infinite;
+    font-family: Courgette;
+    }
+    .container{
+        background-color: transparent;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .img {
+        display: none;
+    }
+    .wave {
+        display: none;
+    }
+    .login-content {
+        justify-content: center;
+    }
+}
